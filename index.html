@@ -1,26 +1,352 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Investigatore Privato Verona</title>
-  <meta name="description" content="Dominio investigatoreprivatoverona.com disponibile per acquisizione o collaborazione. Settore investigazioni private Verona.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Investigatore privato Verona | Servizi investigativi e bonifiche</title>
+  <meta name="description" content="Investigatore privato a Verona e provincia: servizi investigativi per privati e aziende, bonifica microspie, bonifica ambientale e bonifica cellulare. Riservatezza e interventi su appuntamento." />
+
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://investigatoreprivatoverona.com/" />
+
   <style>
-    body { font-family: Arial, sans-serif; background:#f4f4f4; text-align:center; padding:60px; }
-    .box { background:#fff; max-width:600px; margin:auto; padding:40px; border-radius:8px; }
-    h1 { font-size:32px; margin-bottom:20px; }
-    p { font-size:18px; line-height:1.5; }
+    :root{
+      --bg:#0b1220;
+      --card:#0f1b33;
+      --text:#e8eefc;
+      --muted:#b8c4e6;
+      --line:rgba(255,255,255,.12);
+      --accent:#7aa7ff;
+      --accent2:#9be7c4;
+      --shadow: 0 12px 28px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(122,167,255,.20), transparent 55%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(155,231,196,.16), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 56px}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0 20px;
+      border-bottom:1px solid var(--line);
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+      text-decoration:none;
+    }
+    .brand b{font-size:15px; letter-spacing:.4px}
+    .brand span{font-size:12px; color:var(--muted)}
+    nav{display:flex; gap:14px; flex-wrap:wrap}
+    nav a{
+      text-decoration:none;
+      font-size:13px;
+      color:var(--muted);
+      padding:8px 10px;
+      border:1px solid transparent;
+      border-radius:999px;
+    }
+    nav a:hover{
+      color:var(--text);
+      border-color:var(--line);
+      background:rgba(255,255,255,.04);
+    }
+
+    .hero{
+      padding:34px 0 18px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 860px){
+      .hero-grid{grid-template-columns: 1fr}
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .hero-main{padding:26px 24px}
+    h1{
+      margin:0 0 10px;
+      font-size:34px;
+      line-height:1.15;
+      letter-spacing:-.4px;
+    }
+    .lead{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:16px;
+      max-width: 62ch;
+    }
+    .badges{
+      display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 0;
+    }
+    .badge{
+      font-size:12px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+    }
+    .cta{
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      justify-content:center;
+    }
+    .cta h2{
+      font-size:16px; margin:0;
+      letter-spacing:.2px;
+    }
+    .cta p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .cta .btns{display:flex; flex-direction:column; gap:10px; margin-top:6px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      text-decoration:none;
+      padding:11px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      color:var(--text);
+      font-size:14px;
+      font-weight:600;
+    }
+    .btn:hover{background:rgba(255,255,255,.09)}
+    .btn.primary{
+      border-color: rgba(122,167,255,.55);
+      background: linear-gradient(180deg, rgba(122,167,255,.22), rgba(122,167,255,.10));
+    }
+
+    main{padding-top:18px}
+    section{margin-top:16px}
+    .section-card{padding:22px 22px}
+    h2{
+      margin:0 0 10px;
+      font-size:20px;
+      letter-spacing:-.2px;
+    }
+    p{margin:0 0 10px; color:var(--muted)}
+    ul{margin:10px 0 0 18px; color:var(--muted)}
+    li{margin:6px 0}
+    .two{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 860px){ .two{grid-template-columns: 1fr} }
+    .kicker{
+      font-size:12px;
+      color:var(--accent2);
+      letter-spacing:.35px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+    .note{
+      font-size:12px;
+      color:var(--muted);
+      margin-top:8px;
+      border-top:1px solid var(--line);
+      padding-top:10px;
+    }
+    footer{
+      margin-top:22px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+    }
+    .footer-links{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
+    .footer-links a{color:var(--muted); text-decoration:none}
+    .footer-links a:hover{color:var(--text)}
   </style>
+
+  <!-- (Opzionale) Schema LocalBusiness minimale: compila solo se hai dati reali (nome, telefono, indirizzo). -->
+  <!--
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Investigatore Privato Verona",
+    "areaServed": "Verona",
+    "url": "https://investigatoreprivatoverona.com/"
+  }
+  </script>
+  -->
 </head>
+
 <body>
-  <div class="box">
-    <h1>Investigatore Privato Verona</h1>
-    <p>
-      Dominio verticale per servizi di investigazione privata a Verona.<br><br>
-      Ideale per studi investigativi, agenzie o progetti di espansione locale.<br><br>
-      <strong>Disponibile per acquisizione o collaborazione.</strong><br><br>
-      Contatto: <strong>tuaemail@email.it</strong>
-    </p>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/">
+        <b>Investigatore Privato Verona</b>
+        <span>Servizi investigativi • Bonifiche • Verona e provincia</span>
+      </a>
+
+      <nav>
+        <a href="#servizi">Servizi</a>
+        <a href="#bonifiche">Bonifiche</a>
+        <a href="#privacy">Riservatezza</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="card hero-main">
+          <div class="kicker">Verona e provincia</div>
+          <h1>Investigatore privato a Verona<br>Servizi investigativi e bonifiche ambientali</h1>
+          <p class="lead">
+            Servizi di <strong>investigazione privata</strong> e <strong>bonifica da microspie</strong> per privati,
+            aziende e professionisti. Interventi su appuntamento, gestione riservata e operatività nel rispetto della
+            normativa vigente.
+          </p>
+
+          <div class="badges">
+            <span class="badge">Interventi su appuntamento</span>
+            <span class="badge">Massima riservatezza</span>
+            <span class="badge">Verona • Provincia</span>
+            <span class="badge">Bonifica microspie</span>
+            <span class="badge">Bonifica cellulare</span>
+          </div>
+        </div>
+
+        <aside class="card cta">
+          <h2>Richiesta informazioni</h2>
+          <p>Per disponibilità, modalità operative e prime indicazioni, usa la pagina contatti.</p>
+          <div class="btns">
+            <a class="btn primary" href="contatti.html">Vai ai contatti</a>
+            <a class="btn" href="bonifica-microspie-verona.html">Bonifica microspie Verona</a>
+            <a class="btn" href="bonifica-cellulare-verona.html">Bonifica cellulare Verona</a>
+          </div>
+          <div class="note">
+            Suggerimento: se il sito è “neutro” (senza dati personali), resta più vendibile e scalabile.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <main>
+      <section id="servizi" class="card section-card">
+        <h2>Servizi investigativi a Verona</h2>
+        <p>
+          L’attività di investigazione privata è utile quando è necessario <strong>accertare fatti</strong>,
+          raccogliere informazioni e tutelare interessi personali o professionali. Ogni intervento viene valutato
+          in base al caso specifico, con modalità discrete e proporzionate.
+        </p>
+        <ul>
+          <li>Indagini private e familiari</li>
+          <li>Accertamenti su comportamenti sospetti</li>
+          <li>Tutela del patrimonio</li>
+          <li>Verifiche in ambito aziendale</li>
+        </ul>
+      </section>
+
+      <section id="bonifiche" class="two">
+        <div class="card section-card">
+          <h2>Bonifica microspie e bonifica ambientale</h2>
+          <p>
+            In caso di sospetta intercettazione illecita, è disponibile il servizio di
+            <strong>bonifica ambientale da microspie</strong>, con controlli su abitazioni, uffici, sale riunioni e veicoli.
+          </p>
+          <ul>
+            <li>Microspie ambientali e dispositivi sospetti</li>
+            <li>Localizzatori GPS e verifiche in auto</li>
+            <li>Analisi segnali GSM, Wi-Fi e Bluetooth</li>
+            <li>Controllo aree sensibili e punti tipici di occultamento</li>
+          </ul>
+          <p class="note">
+            Approfondisci: <a href="bonifica-microspie-verona.html">Bonifica microspie a Verona</a>
+          </p>
+        </div>
+
+        <div class="card section-card">
+          <h2>Bonifica cellulare e controllo dispositivi mobili</h2>
+          <p>
+            In caso di sospetto accesso non autorizzato al telefono, è possibile eseguire una verifica mirata per
+            individuare anomalie e valutare la presenza di <strong>spyware</strong> o app invasive.
+          </p>
+          <ul>
+            <li>Contesti familiari (separazioni, conflitti)</li>
+            <li>Stalking o molestie</li>
+            <li>Tutela della privacy personale</li>
+            <li>Esigenze aziendali e professionali</li>
+          </ul>
+          <p class="note">
+            Tempi indicativi per dispositivi: <strong>30–45 minuti</strong> (su appuntamento).<br>
+            Approfondisci: <a href="bonifica-cellulare-verona.html">Bonifica cellulare a Verona</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="card section-card">
+        <h2>A chi si rivolgono i servizi</h2>
+        <p>I servizi sono rivolti a:</p>
+        <ul>
+          <li>Privati cittadini</li>
+          <li>Imprenditori e aziende</li>
+          <li>Studi legali e professionisti</li>
+          <li><strong>Eredi</strong> coinvolti in situazioni delicate</li>
+        </ul>
+      </section>
+
+      <section id="privacy" class="card section-card">
+        <h2>Riservatezza e legalità</h2>
+        <p>
+          Le attività vengono svolte nel rispetto della normativa italiana vigente e della privacy (Reg. UE 679/2016 – GDPR).
+          Su richiesta può essere fornita documentazione tecnica a supporto delle verifiche effettuate.
+        </p>
+        <p class="note">
+          Questo sito ha finalità informative: per ogni richiesta vengono valutati contesto, legittimo interesse e modalità operative.
+        </p>
+      </section>
+
+      <section class="card section-card">
+        <h2>Contatti e informazioni</h2>
+        <p>
+          Per disponibilità, modalità operative e prime indicazioni sui servizi, visita la pagina contatti.
+          Interventi su appuntamento e gestione riservata delle richieste.
+        </p>
+        <p class="note">
+          <a class="btn primary" href="contatti.html" style="display:inline-flex; width:auto;">Vai alla pagina Contatti</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        Investigatore privato Verona – servizi investigativi, bonifica microspie, bonifica ambientale e bonifica cellulare
+        a Verona e provincia.
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="bonifica-microspie-verona.html">Bonifica microspie</a>
+        <a href="bonifica-cellulare-verona.html">Bonifica cellulare</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
